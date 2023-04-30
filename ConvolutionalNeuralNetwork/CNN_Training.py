@@ -121,15 +121,14 @@ def train():
    
     return trainingLossPlot, rmse_mean, rmse_std
 
-def loss_variation(loss,epochs):
-    for x in range(1,epochs):
-        epochs.append(x)
-    plt.xlabel('Number of Epoch')
-    plt.ylabel('Training Loss')
-    plt.title('Loss Variation')
-
-    plt.plot(epochs, loss)
-    plt.show()
+#def loss_variation(loss,epochs):
+#    for x in range(1,epochs):
+#        epochs.append(x)
+#    plt.xlabel('Number of Epoch')
+#    plt.ylabel('Training Loss')
+#    plt.title('Loss Variation')
+#    plt.plot(epochs, loss)
+#    plt.show()
 
 class dataTrain(Dataset):
     def __init__(self, X, Y):
@@ -161,7 +160,7 @@ torch.save(model.state_dict(), 'my_model.pt')
 
 
 #Plotting the learning curve
-loss_variation(output[0], 100)
+#loss_variation(output[0], 100)
 
 
 # Save the trained model
